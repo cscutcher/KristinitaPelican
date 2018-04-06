@@ -1,5 +1,9 @@
 clone_depth: 1
 
+init:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - SET PYTHONIOENCODING=utf-8
+
 environment:
 
   matrix:
@@ -11,6 +15,7 @@ environment:
 platform: x64
 
 install:
+  - python -m pip install --upgrade pip
   - pip install pelican gitpython
 
 build_script:
