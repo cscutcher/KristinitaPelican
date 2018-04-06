@@ -10,4 +10,4 @@ install:
   - pip install gitpython markdown pelican
 
 script:
-  - pelican content -s pelicanconf.py --debug
+  - pelican content -s pelicanconf.py --debug --fatal warnings
