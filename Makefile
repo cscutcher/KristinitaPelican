@@ -25,7 +25,7 @@ CLOUDFILES_CONTAINER=my_cloudfiles_container
 
 DROPBOX_DIR=~/Dropbox/Public/
 
-GITHUB_PAGES_BRANCH=master
+GITHUB_PAGES_BRANCH=gh-pages
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -63,14 +63,6 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-
-# Correct paths for individual CSS
-sashareplacepath:
-	cd $(OUTPUTDIR) && sfk replace -dir . -file .html -pat "_css/personal_../css/personal_" -yes
-
-# Beautify HTML
-sashaprettyhtml:
-	cd $(OUTPUTDIR) && glob-run html-beautify -r **/*.html
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
