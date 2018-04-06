@@ -6,8 +6,7 @@ language: python
 python: 3.6
 
 install:
-  - pip install pelican
-  - pip install gitpython
+  - pip install pelican gitpython
 
 script:
   - pelican content -s pelicanconf.py

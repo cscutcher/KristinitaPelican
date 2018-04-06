@@ -1,0 +1,17 @@
+clone_depth: 1
+
+environment:
+
+  matrix:
+
+    - PYTHON: "C:\\Python36-x64"
+      PYTHON_VERSION: "3.6.5"
+      PYTHON_ARCH: "64"
+
+platform: x64
+
+install:
+  - pip install pelican gitpython
+
+build_script:
+  - pelican content -s pelicanconf.py
