@@ -14,4 +14,4 @@ install:
   - pip install pelican gitpython
 
 build_script:
-  - pelican content -s pelicanconf.py
+  - pelican content -s pelicanconf.py --debug

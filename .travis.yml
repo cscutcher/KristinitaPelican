@@ -9,4 +9,4 @@ install:
   - pip install pelican gitpython
 
 script:
-  - pelican content -s pelicanconf.py
+  - pelican content -s pelicanconf.py --debug
