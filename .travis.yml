@@ -7,7 +7,7 @@ python: 3.6
 
 install:
   - pip install --upgrade pip
-  - pip install pelican gitpython
+  - pip install gitpython markdown pelican
 
 script:
   - pelican content -s pelicanconf.py --debug
