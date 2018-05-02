@@ -1,3 +1,3 @@
-Title: Debugging filetime_from_git and permalinks plugins
+Title: SashaPermalinks
 
 Sasha Goddess!
